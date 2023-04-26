@@ -20,3 +20,10 @@ updates:
       - "typeorm"
       - "bcrypt"
       - "jsonwebtoken"
+    allow:
+      # Allow updates to the @nestjs/cli package
+      - dependency-name: "@nestjs/cli"
+        dependency-type: "devDependencies"
+      # Allow updates to all other packages
+      - dependency-type: "all"
+        update-type: "widen"
